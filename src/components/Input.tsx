@@ -16,7 +16,7 @@ export const Input: React.FC<Props> = ({color, setColor}) => {
                 value={color} 
             />
             <input 
-                className="w-full h-full outline-none text-2xl font-semibold bg-transparent font-mono" 
+                className="w-full h-full outline-none text-2xl font-semibold bg-transparent font-mono text-white" 
                 onChange={e => setColor(e.target.value)} 
                 type="text" 
                 value={color}

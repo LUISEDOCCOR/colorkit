@@ -4,6 +4,7 @@ import { someColors } from "./data"
 import { getColors } from "./lib/chroma"
 import { ContainerColor } from "./components/ContainerColor"
 import { Toaster } from "react-hot-toast"
+import { Background } from "./components/Backgraund" 
 
 function App() {
 
@@ -28,19 +29,12 @@ function App() {
   
   return (
     <>
+    <Background/>
       <header>
-        <nav className="px-12 py-4 border-b-2 border-cGray">
-          <div className="flex items-center gap-4">
-            <img 
-              className="w-8 h-8 rounded-full aspect-square object-cover
-              object-center" 
-              src="/colorkit.webp" 
-              alt="icon colorkit" 
-             />
+        <nav className="p-4 border-b border-cGray">
            <h1 className="text-2xl font-semibold"><a  href="/">ColorKit</a></h1>
-          </div>
         </nav>
-        <section className="text-center mt-8 w-80 mx-auto">
+        <section className="text-center mt-16 w-80 mx-auto">
             <h1 className="text-4xl font-semibold leading-snug">Tailwind CSS Color Generator</h1>
             <p className="mt-4 text-xl">Generate the best color palettes for your projects with Tailwind</p>
         </section>

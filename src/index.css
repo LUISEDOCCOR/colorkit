@@ -4,12 +4,36 @@
 
 :root{
     color-scheme: dark ligth;
+    --sb-track-color: #151515;
+    --sb-thumb-color: #383838;
+    --sb-size: 8px;
 }
 
 body {
     font-family: 'DM Sans Variable', sans-serif;
 }
 
+body::-webkit-scrollbar {
+width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+background: var(--sb-track-color);
+border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+background: var(--sb-thumb-color);
+border-radius: 10px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+body {
+    scrollbar-color: var(--sb-thumb-color)
+                    var(--sb-track-color);
+}
+}
 input[type="color"] {
     -webkit-appearance: none;
     -moz-appearance: none;
