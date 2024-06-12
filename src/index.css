@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    color-scheme: dark ligth;
+}
+
+body {
+    font-family: 'DM Sans Variable', sans-serif;
+}
+
+input[type="color"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+}
+input[type="color"]::-webkit-color-swatch {
+    border-radius: 99999px;
+    border: none;
+    aspect-ratio: 1 / 1;
+}
