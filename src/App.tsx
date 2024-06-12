@@ -32,7 +32,7 @@ function App() {
     <Background/>
       <header>
         <nav className="p-4 border-b border-cGray">
-           <h1 className="text-2xl font-semibold"><a  href="/">ColorKit</a></h1>
+           <h1 className="text-xl font-medium"><a  href="/">ColorKit</a></h1>
         </nav>
         <section className="text-center mt-16 w-80 mx-auto">
             <h1 className="text-4xl font-semibold leading-snug">Tailwind CSS Color Generator</h1>
