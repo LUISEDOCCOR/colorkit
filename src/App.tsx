@@ -52,7 +52,7 @@ function App() {
             <p className="mt-4 text-xl">Generate the best color palettes for your projects with Tailwind</p>
         </section>
       </header>
-      <main className="my-24 flex flex-col items-center">
+      <main className="my-24 flex flex-col items-center px-4">
         <section className="flex justify-center flex-wrap gap-x-24 gap-y-12">
           <div className="space-y-4 text-xl font-medium text-neutral-500">
             <span>Color Primary</span>
