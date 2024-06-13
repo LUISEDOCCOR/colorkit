@@ -5,6 +5,7 @@ import { getColors } from "./lib/chroma"
 import { ContainerColor } from "./components/ContainerColor"
 import { Toaster } from "react-hot-toast"
 import { Background } from "./components/Backgraund" 
+import { getTailwindClases } from "./lib/colornamer"
 import { copyToClipboard } from "./utils/clipboard"
 
 function App() {
@@ -18,7 +19,12 @@ function App() {
   
   const [primaryColor, setPrimaryColor] = useState("")
   const [secondaryColor, setSecondaryColor] = useState("")
-  const [colors, setColors] = useState<string[]>()
+  const [colors, setColors] = useState<string[]>([])
+
+  const handleClickCopy = () => {
+    const tailwindclases = getTailwindClases(colors)
+    copyToClipboard(`${tailwindclases}`)
+  }
 
 
   useEffect(()=>{
@@ -60,12 +66,16 @@ function App() {
         <section className="flex justify-center flex-wrap items-center mt-16 gap-y-12 gap-x-8">
           {
             colors?.map((color, index) => (
-              <ContainerColor index={index} key={index} color={color}/>
+              <ContainerColor key={index} color={color}/>
             ))
           }
         </section>
         <section className="mt-16 flex justify-center">
-            <button onClick={() => copyToClipboard(`${colors}`)} className="bg-cyan-950 font-medium text-xl px-8 py-2 rounded-md hover:scale-105 transition-transform">
+            <button 
+              onClick={() => handleClickCopy()} 
+              className="bg-cyan-950 font-medium text-xl px-8 py-2 
+              rounded-md hover:scale-105 transition-transform"
+            >
               Export to taiwlind
             </button>
         </section>
